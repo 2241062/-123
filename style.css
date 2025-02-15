@@ -25,7 +25,8 @@ body {
 
 /* 主图片样式 */
 .main-image {
-  width: 150px;
+  width: 40vm;
+  max-width: 200px
   height: auto;
   transition: transform 0.3s;
 }
@@ -40,8 +41,9 @@ h1 {
 /* 按钮外层容器：相对定位，用来控制按钮的绝对位置 */
 .button-container {
   position: relative;
-  width: 300px;   /* 可以根据需要调整 */
-  height: 50px;   /* 给个固定高度 */
+  width: 80%;   /* 可以根据需要调整 */
+  max-width: 400px
+  height: auto
   margin-top: 20px;
 }
 
