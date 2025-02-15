@@ -1,0 +1,81 @@
+/* 页面整体样式归零 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 页面背景和字体 */
+body {
+  background: rgb(254,235,228); /* 背景颜色 */
+  font-family: "Microsoft YaHei", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* 容器：竖向居中排布 */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* 主图片样式 */
+.main-image {
+  width: 150px;
+  height: auto;
+  transition: transform 0.3s;
+}
+
+/* 标题 */
+h1 {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 20px 0;
+}
+
+/* 按钮外层容器：相对定位，用来控制按钮的绝对位置 */
+.button-container {
+  position: relative;
+  width: 300px;   /* 可以根据需要调整 */
+  height: 50px;   /* 给个固定高度 */
+  margin-top: 20px;
+}
+
+/* 按钮的基础样式 */
+.btn {
+  position: absolute;  /* 绝对定位 */
+  top: 0;
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #fff;
+  /background-color: rgb(254,235,228); /* 背景颜色 *//
+  cursor: pointer;
+  white-space: nowrap; /* 不换行 */
+  /* 过渡：让按钮放大和移动时有动画 */
+  transition: transform 0.3s, left 0.3s;
+}
+
+/* 左侧按钮：初始放在最左边 */
+#btnYes {
+  background-color: rgb(233,131,129); /* 按钮1颜色 */
+  left: 0;
+  transform-origin: left center; /* 以左侧为基准放大，向右扩展 */
+}
+
+/* 右侧按钮：初始放在 left=200px, 也就是距离左侧按钮一段距离 */
+#btnNo {
+  background-color: rgb(105,149,198); /* 按钮2颜色 */
+  left: 200px;
+}
+
+/* 点击瞬间的小回弹效果，可选 */
+.btn:active {
+  transform: scale(0.95);
+}
