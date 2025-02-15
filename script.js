@@ -23,6 +23,9 @@ const gap = 20;
  */
 btnYes.addEventListener('click', () => {
   mainImage.src = 'images/2.png';
+
+  document.querySelector('h1').style.display = 'none';             // 隐藏标题
+  document.querySelector('.button-container').style.display = 'none'; // 隐藏按钮区域
 });
 
 /**
